@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Encapsulation - Hector</h2>
+
+<script>
+//Encapsulation Technique 1: closure scope
+
+function createCircle(radius) {
+  return {
+      area: function() {
+          return radius * radius * Math.PI;
+      }
+  }
+};
+
+var circle1 = createCircle(3);
+
+//Write console.log here
+
+document.write("Area is " + circle1.area());
+document.write("Radius is " + circle1.radius); // THIS WILL FAIL
+
+//Encapsulation Technique 2: private variables
+
+function createCircle(radius) {
+    var diameter = radius * 2;
+
+    return {
+        area: function() {
+            return radius * radius * Math.PI;
+        },
+        circumference: function() {
+            return diameter * Math.PI;
+        }
+    }
+};
+
+var circle2 = createCircle(3);
+
+//Write console.log here
+document.write("Circumference is " + circle2.circumference());
+document.write("Diameter is " + circle2.diameter); // THIS WILL FAIL
+
+</script>
+
+
+</body>
+</html>

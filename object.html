@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>JavaScript Objects - Hector</h2>
+
+    <script>
+      var car = {
+        type: "Honda",
+        model: "Civic",
+        price: "25000",
+
+        displayInfo1: function () {
+          document.write(
+            `${car.type} has many models but ${car.model} is $${car.price}`,
+          );
+        },
+
+        displayInfo: function () {
+          console.log(
+            `${car.type} has many models but ${car.model} is $${car.price}`,
+          );
+        },
+      };
+      car.displayInfo();
+      car.displayInfo1();
+    </script>
+  </body>
+</html>
